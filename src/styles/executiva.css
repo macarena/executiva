@@ -1,13 +1,6 @@
-/*
-$Header: /cvsroot/tikiwiki/tiki/styles/moreneat.css,v 1.82.2.1 2007-11-07 15:10:55 jyhem Exp $
-
-MoreNeat theme
-*/
-
-
 
 body {
-  background-color: #E9ECEF;
+	background-color: white;
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
@@ -18,13 +11,12 @@ margin-top: 2px;
 margin-bottom: 6px;
 }
 a {
-color: #436976;
-padding: 0px;
+	color: #750e0e;
+	padding: 0px;
 }
 a:hover {
-color: #000000;
-background-color: #E9ECEF;
-padding: 0px;
+	color: #750e0e;
+	text-decoration: none;
 }
 span.tabbut {
 	border-top: 1px solid #99bec6;
@@ -55,28 +47,47 @@ text-decoration: none;
 
 /********************************************* GENERAL LAYOUT *********************************************************/
 
+DIV#sitelogo {
+	margin: 5px 15px -7px 5px;
+}
+
 /* This div encloses the whole Tiki application */
 DIV#tiki-main { margin: 0px;  width : 100%; }
 
 /* This is the header */
 DIV#tiki-top {  
-background-color: #C7D0D9; 
-background-repeat: no-repeat;
-color: #225566; 
-/*
-height: 12px;  
-*/
-padding-right: 0px;  
-font-size: 10px;
-padding-bottom: 1px;
-border-bottom: 1px solid #8CACBB;
+	background-color: #750e0e; 
+	background-repeat: no-repeat;
+	background-image: url(executiva/barra_topo_detalhe.png);
+	color: white; 
+	height: 30px;  
+	padding: 0px;
+	padding-left: 60px;
+	margin-left: 140px;
+	font-size: 10px;
 }
 
 DIV#tiki-top a {
-color: #225566;
-font-weight: bold;
-text-decoration: none;
+	color:white;
+	font-size:13px;
+	font-weight:bold;
+	line-height:30px;
+	text-decoration:none;
 }
+
+DIV#tiki-top a:hover {
+	color: #a65c5c;
+	background: none;
+	font-size:13px;
+	font-weight:bold;
+	line-height:30px;
+}
+
+DIV#tiki-top img {
+	display: none;
+}
+
+/*
 DIV#tiki-top-menu {  
 background-color: #C7D0D9; 
 border-bottom: 1px solid #8CACBB;
@@ -99,7 +110,7 @@ color: black;
 font-size: 10px;   
 text-decoration: none;
 }
-
+*/
 
 DIV#usermenu {  
 background-color: white; 
@@ -113,23 +124,33 @@ font-size: 10px;
 
 
 /* This is the middle */
-DIV#tiki-mid {  background: #E9ECEF;  height: auto; }
+DIV#tiki-mid {
+	background: url(executiva/fundo.png) no-repeat fixed 100% 0;
+	height: auto;
+}
 
 DIV#tiki-center table { }
-#tikimidtbl { width: 100%; }
+
+table#tikimidtbl { }
 
 /* And this is the footer */
 DIV#tiki-bot {  padding-top: 10px;  margin-top: 5px;  background: #C7D0D9; border-top: 1px solid #87ACBB; border-bottom: 1px solid #87ACBB; margin-bottom: 10px; padding-bottom: 5px; font-size: 11px;}
 
 /* The three columns */
 TD#leftcolumn {  padding-right: 0px; vertical-align: top;  width: 180px;}
-TD#rightcolumn {  padding-left: 0px; vertical-align: top;  width: 180px;}
-TD#centercolumn {  vertical-align: top;}
+TD#rightcolumn {
+	padding-left: 0px;
+	vertical-align: top;
+}
+TD#centercolumn {
+	padding: 0 20px 0 200px;
+	vertical-align: top;
+	width: 800px;
+}
 
-/* And this is what lies inside the centercolumn */
-/*new tiki-center below fixes center column sliding under right column in IE (xen)*/
-/*DIV#tiki-center {  margin-left: 2px;  margin-right: 5px;  padding-left: 7px;  padding-right: 5px; }*/
-DIV#tiki-center {  }
+DIV#tiki-center {
+	font-size: 10px;
+}
 
 div#debugconsole {
   position: absolute;
@@ -153,6 +174,10 @@ span.off-option { color: #7B8B44; }
    are also used in the rankings, admin screen etc. 
    The box class is used for modules while the cbox class is used for other boxes
 */
+
+div.box-gambi {
+	display: none;
+}
 
 /* Boxes used for modules (modules are those boxes in the left/right columns) */
 div.box {  
@@ -597,14 +622,10 @@ td.wikicell {
 
 /* Text in wiki pages is displayed using the following style */
 body.wikitext, div.wikitext {
-  background: white;
-  font-size: 12px;
-  width: auto; /*xen fixes IE formating.  i.e. Middle column sliding under right*/
-  clear: both;
+	font-size: 12px;
+	width: auto; /*xen fixes IE formating.  i.e. Middle column sliding under right*/
+	clear: both;
 	padding : 1ex 2ex;
-}
-div.wikitext {
-  border: 1px solid #99bec6;
 }
 .wikitopline table { width: 100%; }
 
@@ -2145,6 +2166,18 @@ a.flipmodtitle:hover img {
 #siteloginbar {
 	text-align: right;
 	font-size: 10px;
-	padding: 4px;
+	float: right;
+	margin: 15px 18px 0 0;
 }
+div#siteloginbar a {
+	font-size: 10px;
+	line-height: 0;
+}
+div#siteloginbar a:hover {
+	font-size: 10px;
+	color: white;
+	line-height: 0;
+	text-decoration: underline;
+}
+
 /* end of css file */
