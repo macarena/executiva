@@ -181,24 +181,20 @@ div.box-gambi {
 
 /* Boxes used for modules (modules are those boxes in the left/right columns) */
 div.box {  
-  background-color: white;
-  margin: 4px;
-  border: 1px solid #8CACBB; 
-  overflow: auto;
-  width: 170px;
+	margin: 4px;
+	overflow: auto;
+	width: 170px;
 }
 
 .wikitext div.box {
 	width : auto;
 }
 h3.box-title {
-  background-color: #C7D0D9;
-  border-bottom: 1px solid #8CACBB;
-  color: #555575;
-	font-size: 10px;   
-  overflow: hidden;
-  text-align: center;
-  padding: 0px;  
+	color: #750e0e;
+	font-size: 13px;   
+	overflow: hidden;
+	text-align: left;
+	padding: 0px;  
 }
 
 div.box-title table {
@@ -208,7 +204,6 @@ div.box-title table {
 /* And this is the data */
 div.box-data {
   overflow: hidden;
-  background-color: #ffffff;
   color: #000000;
   padding: 5px;
   font-size: 10px;  
@@ -217,10 +212,9 @@ div.box-data {
 /* Menus */
 /* Separators are used to sepparate menu areas in the application menu and user created menus*/
 div.separator, div.separatorline {
-  background: white;
-  color: black;   font-size: 10px;
-  padding: 2px;
-	border-top: 1px solid #dedede;
+	color: black;
+	font-size: 10px;
+	padding: 2px;
 }
 div.separator:first-child, div.separatorline:first-child {
 	border:0;
@@ -228,9 +222,8 @@ div.separator:first-child, div.separatorline:first-child {
 div.separator + div {
 	padding-bottom: 10px;
 }
-div.separator + div .linkmenu:first-child {
-	border-top: 1px solid #dedede;
-}
+div.separator + div .linkmenu:first-child { }
+
 .separatorline, .optionline {
   border-top: 1px solid #dedede;
   margin-top: 2px;
@@ -351,10 +344,10 @@ input, textarea, select {
 	font-size : 10px;
 }
 input { text-indent : 2px; }
-input[type=submit]:hover {
+/* input[type=submit]:hover {
   background-color: #aaaaaa;
   cursor: pointer;
-}
+} */
 
 /* General tables */
 /* These styles apply to tables used to display common listings such as the wiki page listing, last changes,
@@ -504,9 +497,25 @@ a.pagetitle, a.forumspagetitle {font-size: 26px; font-family: "Trebuchet MS",Ver
 a.pagetitle:hover,a.forumspagetitle:hover {font-size: 26px; font-family: "Trebuchet MS",Verdana, Arial, Helvetica, sans-serif; color : black;}
 
 /* Non-linking titles (three levels) */
-H1 { font-size: 24px;  color : #436976; margin: 6px 0 2px 0; }
-H2 { font-size: 18px;  color : #234956; margin: 3px 0 1px 0; }
-H3 { font-size: 14px;  color : #032936; margin: 1px 0; }
+H1, H2, H3, H4, H5 {
+	margin: 20px 0 0 0;
+}
+H2 {
+	font-size: 24px;
+	color : #750e0e;
+}
+H3 {
+	font-size: 18px;
+	color : #a65c5c;
+}
+H4 {
+	font-size: 14px;
+	color : #888888;
+}
+H5 {
+	font-size: 13px;
+	color: #73400e;
+}
 
 /* Links where no special link style apply (usually with the general application background) */
 .link, .gallink, .bloglink, .fgallink, .trailer, .opencomlink, .commentslink, .jukeboxlink,
@@ -536,15 +545,13 @@ div.searchdate {  font-size: 10px; color : #333333;}
 
 /***********************************************  THE WIKI ***********************************************************/
 div.titlebar {
-  background: #C7D0D9;
-  color: black;
-  border: 1px solid #8CACBB;
-  padding-left: 1px; 
-  padding-right: 1px; 
-  padding-top: 1px;
-  padding-bottom: 1px;
-  margin: 1px 1px;
-  clear: both;
+	background: #750E0E url(executiva/barra_topo_detalhe.png) no-repeat scroll 0 -10px;
+	clear: both;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 20px;
+	padding-left: 50px;
 }
 
 table.wikibar {
@@ -615,9 +622,8 @@ table.wikitable {
 }
 
 td.wikicell {
-  border-collapse:collapse;
-  border: 1px solid #8CACBB;
-  background-color: #F7F9FA;
+	border-collapse:collapse;
+	border: 1px solid #750e0e;
 }
 
 /* Text in wiki pages is displayed using the following style */
@@ -1098,14 +1104,14 @@ textarea.tshoutbox{
         font-family: courier;
  }
 
-  hr  {
-    width: 100%;
-    height: 1px;
-    background-color: #AAAAAA;
-    border-width: 0px;
-    padding: 0px;
-    color: #AAAAAA;
-  }
+hr {
+	width: 100%;
+	height: 10px;
+	background: #750E0E url(executiva/barra_topo_detalhe.png) no-repeat scroll 0 -20px;
+	border-width: 0px;
+	padding: 0px;
+	color: #AAAAAA;
+}
 
   /*************************************************** WIKI TOCS ***************************************************/
 
@@ -2143,6 +2149,7 @@ ul li.toclevel-8 { margin-left: 175px; }
 
 h3.box-title {
 	position: relative;
+	margin: 0;
 }
 
 .box a.flipmodtitle img {
