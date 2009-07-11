@@ -126,6 +126,7 @@ font-size: 10px;
 /* This is the middle */
 DIV#tiki-mid {
 	background: url(executiva/fundo.png) no-repeat fixed 100% 0;
+	#background: url(executiva/fundo.png) no-repeat fixed 100% -8
 	height: auto;
 }
 
