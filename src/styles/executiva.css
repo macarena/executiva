@@ -130,7 +130,6 @@ padding-bottom: 2px;
 font-size: 10px;   
 }
 
-
 /* This is the middle */
 DIV#tiki-mid {
 	background: url(executiva/fundo.png) no-repeat fixed 100% 0;
@@ -184,9 +183,69 @@ span.off-option { color: #7B8B44; }
    The box class is used for modules while the cbox class is used for other boxes
 */
 
-div.box-gambi {
+div#bemvindo_msg {
+	background-color: #DE9A9B;
+	border: 3px solid;
+	border-color: #DE9A9B;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 0;
+	margin: 0;
+}
+
+div#bemvindo_msg div.interno {
+	border: 1px solid #2f2020;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	background: white url(cappf/fundo_bemvindo.png) repeat-x 0 100%;
+	padding: 0;
+	margin: 0;
+}
+div#bemvindo_msg table {
+	margin-bottom: 5px;
+}
+
+div#bemvindo_msg th {
+	background: none;
+	font-size: 20px;
+	font-family: Georgia, sans-serif;
+	color: #2f2020;
+	text-align: left;
+	border: none;
+	padding: 10px;
+}
+
+div#bemvindo_msg td:first-child {
+	border-right: 1px dotted #aaa;
+	font-size: 10px;
+	color: #333;
+}
+div#bemvindo_msg td {
+	padding: 10px;
+}
+
+div.box-gambi h3 {
 	display: none;
 }
+div.box-gambi .box-data {
+	font-size: 10px;
+	color: #777;
+	text-align: right;
+}
+a.cadastro {
+	padding: 5px;
+	background-color: #9e0000;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	display: block;
+	text-align: center;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+
 
 /* Boxes used for modules (modules are those boxes in the left/right columns) */
 div.box {  
@@ -505,6 +564,8 @@ TD.third {border: 1px solid #8CACBB;  font-size: 10px; color : Black; background
 a.pagetitle, a.forumspagetitle {font-size: 26px; font-family: "Trebuchet MS",Verdana, Arial, Helvetica, sans-serif; text-decoration: none; color : black;}
 a.pagetitle:hover,a.forumspagetitle:hover {font-size: 26px; font-family: "Trebuchet MS",Verdana, Arial, Helvetica, sans-serif; color : black;}
 
+.wikitext .pagetitle {display: none;}
+
 /* Non-linking titles (three levels) */
 H1, H2, H3, H4, H5 {
 	margin: 20px 0 0 0;
@@ -731,39 +792,24 @@ span.posthead small { font-size: 9px; color: #676767; font-weight: normal; }
 /* The post body */
 div.postbody {
   overflow: hidden;
-  background: white;
-  border: 1px solid #aeaeae;
-	font-size: 10px;  
-	color: black;
+  font-size: 10px;  
+  color: black;
   padding-left: 5px;
-	padding-top: 5px; 
-	padding-bottom: 2px; 
+  padding-top: 5px; 
+  padding-bottom: 2px; 
   margin-bottom: 10px;
 }
 
 /* The weblog title */
 div.blogtitle {
-  color: black; font-size: 11px; font-weight : bold;
+  color: #750E0E;
   font-size: 18px;
-  background-color: #C7D0D9; 
-  padding-left: 2px;
-  padding-right: 5px;
   margin-top: 10px;
-  border: 1px solid #8CACBB;
-  border-bottom: 0px;
 }
 
 /* The weblog information */
 div.bloginfo {
-  background: white;
-  border: 1px solid #8CACBB;
-  padding-left: 0.8em; 
-  padding-right: 0.8em; 
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  margin-bottom: 10px;
-  font-size: 11px;
-  clear: both;
+  float: right;
 }
 
 /* Weblog description */
@@ -781,15 +827,8 @@ div.blogdesc {
 
 /* Links to post/edit/rss feed for the webelog are contained inside this div */
 div.blogtools {
-  background: white;
-  border: 1px solid #8CACBB;
-  padding-left: 0.8em; 
-  padding-right: 0.8em; 
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
   margin-bottom: 10px;
   font-size: 10px;
-  clear: both;
 }
 
 /****************************************************** CMS ***************************************************************/
@@ -2194,6 +2233,9 @@ div#siteloginbar a:hover {
 	color: white;
 	line-height: 0;
 	text-decoration: underline;
+}
+div#siteloginbar .link {
+	color: white;
 }
 
 /* end of css file */
